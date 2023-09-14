@@ -25,6 +25,11 @@ inline wait() {
 inline signal() {
 	atomic {
 		/* Define the signal() function here */
+		if											// Wir können nicht wie in der Aufgabe gezeigt überprüfen ob S.L/S.blocked[] leer ist, da S.blocked[]
+		::  S.blocked[0] -> S.blocked[0] = false;	// von Natur aus die bools für beide Prozesse enthält. Daher geben wir einfach, wie in der Aufgabe
+		::  S.blocked[1] -> S.blocked[1] = false;	// verlangt, einen der beiden Prozesse frei.
+		::  else -> S.V++;							// Der "if S.L = ∅" ist hier das else, da, wie oben erwähnt, keine Prüfung auf ein leeres Array erfolgen
+		fi											// kann, da das Array hier nie leer ist.
 	}
 }
 
@@ -39,11 +44,23 @@ init {
 }
 
 proctype p() {
-
+	do									// loop forever
+	::  true ->							// loop forever
+		printf("P Noncritical.\n");		// p1
+		wait();							// p2
+		printf("P Critical!\n");		// p3
+		signal();						// p4
+	od									// loop forever
 }
 
 proctype q() {
-
+	do									// loop forever
+	::  true ->							// loop forever
+		printf("P Noncritical.\n");		// q1
+		wait();							// q2
+		printf("P Critical!\n");		// q3
+		signal();						// q4
+	od									// loop forever
 }
 
 
