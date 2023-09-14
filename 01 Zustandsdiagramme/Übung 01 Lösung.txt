@@ -37,9 +37,9 @@ Aufgabe 2
     Ja, gibt es.
 
 Aufgabe 3
-    OMMWW  2
-    WOMMW  3
-    MWWOM  3
-    WWOMM  1
-    MMWWO  2
+    OMMWW  2x
+    WOMMW  3x
+    MWWOM  3x
+    WWOMM  1x
+    MMWWO  2x
     5 Endzustände gesamt
