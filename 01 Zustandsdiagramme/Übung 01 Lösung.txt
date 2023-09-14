@@ -1,3 +1,6 @@
+X links neben dem "Baum" heissen bloß, dass von diesem Zustand keine Bewegung mehr möglich ist.
+Für Sift und Papier muss man offensichtlich eine andere Notation benutzen als hier.
+
 Aufgabe 1
     +MMOWW
     X -OMMWW
