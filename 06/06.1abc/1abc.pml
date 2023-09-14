@@ -43,8 +43,13 @@ init {
 
 }
 
+// 1b)
 int critical = 0;
 #define mutex (critical <=1)
+
+// 1c)
+bool csp = false;
+
 
 proctype p() {
 	do									// loop forever
@@ -53,6 +58,7 @@ proctype p() {
 		wait();							// p2
 		critical++;
 		printf("P Critical!\n");		// p3
+		csp = true;
 		critical--;
 		signal();						// p4
 	od									// loop forever
@@ -65,6 +71,7 @@ proctype q() {
 		wait();							// q2
 		critical++;
 		printf("P Critical!\n");		// q3
+		csp = true;
 		critical--;
 		signal();						// q4
 	od									// loop forever
