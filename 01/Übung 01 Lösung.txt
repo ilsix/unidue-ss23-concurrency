@@ -1,0 +1,45 @@
+Aufgabe 1
+    +MMOWW
+    X -OMMWW
+      +MOMWW
+    X   -OMMWW
+        +MWMOW
+          +MWOMW
+            +OWMMW
+    X         -WOMMW
+            +MWWMO
+    X         -MWWOM
+          +MWMWO
+            +MWOWM
+              +OWMWM
+                +WOMWM
+                  +WWMOM
+                    >WWOMM
+    X         -MWWOM
+      +MMWOW
+        +MOWMW
+          +OMWMW
+            +WMOMW
+    X         -WOMMW
+              +WMWMO
+                +WMWOM
+                  +WOWMM
+    X               >WWOMM
+          +MWOMW
+            +OWMMW
+    X         -WOMMW
+            +MWWMO
+    X         -MWWOM
+    X   -MMWWO
+    X -MMWWO
+
+Aufgabe 2
+    Ja, gibt es.
+
+Aufgabe 3
+    OMMWW  2
+    WOMMW  3
+    MWWOM  3
+    WWOMM  1
+    MMWWO  2
+    5 Endzustände gesamt
