@@ -1,0 +1,8 @@
+1a) check() überprüft ob eine Datei existiert. Das Programm prüft ob harmlessfile existiert, simuliert Arbeit und liest harmlessfile
+    dann auf die Standardausgabe aus.
+1b) Ein TOCTOU-Angriff ist in Zeile 42 möglich, wo do_work das Programm ausbremst.
+    Der Angriff basiert darauf, dass die Datei zwischen Check und tatsächlicher Nutzung geändert oder anders verlinkt wird.
+1c) Terminal 1: TOCTOU starten
+    Terminal 2: "mv harmlessfile harmlessfile_old && ln -s /etc/shadow harmlessfile" ausführen
+                Benennt das bestehende harmlessfile um und linked auf /etc/shadow
+    Terminal 1: TOCTOU zeigt die gelinkte /etc/shadow an
